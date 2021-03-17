@@ -99,22 +99,25 @@ main {
 }
 
 /*Change color of question text into soft red when the button is clicked and on mouse over*/
-.active:hover,
+
 .accordion--question:hover {
   color: var(--primary-2);
 }
-.active {
+.reveal-answer .accordion--question {
   font-weight: var(--text-bold);
   outline: none;
 }
 
-.accordion--question:focus img {
+.reveal-answer img {
   transform: rotate(180deg);
-  transition: 0.75s ease-in;
+  transition: 0.55s ease-in;
 }
 .accordion--answer {
   /*Hide the answer by default*/
   display: none;
+}
+.reveal-answer .accordion--answer {
+  display: block;
   overflow: hidden;
   width: 260px;
   text-align: justify;
@@ -192,16 +195,16 @@ main {
 }
 /*For Desktop*/
 @media only screen and (min-width: 1000px) {
-  body{
+  body {
     align-items: flex-start;
   }
   main {
     grid-template-columns: 450px 1fr;
   }
-  .accordion{
+  .accordion {
     margin-left: 10px;
   }
-  .header__container h1{
+  .header__container h1 {
     font-size: 2.5rem;
   }
   .image__container {
@@ -243,7 +246,7 @@ main {
   .accordion--answer {
     width: 100%;
   }
-  .attribution{
+  .attribution {
     margin-top: 150px;
   }
 }
