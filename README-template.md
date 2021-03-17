@@ -40,7 +40,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://github.com/anh-vumartell/FrontendMentor-FAQ-accordion-card/tree/master
 - Live Site URL: https://fqa-accordion-card.netlify.app/
 
 ## My process
