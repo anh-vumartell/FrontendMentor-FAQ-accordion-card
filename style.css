@@ -192,9 +192,17 @@ main {
 }
 /*For Desktop*/
 @media only screen and (min-width: 1000px) {
+  body{
+    align-items: flex-start;
+  }
   main {
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
+    grid-template-columns: 450px 1fr;
+  }
+  .accordion{
+    margin-left: 10px;
+  }
+  .header__container h1{
+    font-size: 2.5rem;
   }
   .image__container {
     width: 100%;
@@ -209,30 +217,33 @@ main {
     background-image: url(./images/bg-pattern-desktop.svg);
     background-size: 700px;
     background-repeat: no-repeat;
-    background-position: -430px -185px;
+    background-position: -300px -145px;
   }
   .image--desktop img {
     position: relative;
-    height: 250px;
-    top: 20%;
+    height: 340px;
+    top: 10%;
     left: -40px;
   }
   .image--box {
     display: block;
     position: relative;
     top: -65%;
-    left: -72px;
+    left: -95px;
   }
   .image--box img {
-    width: 150px;
+    width: 200px;
     animation: jumpy-box 1.5s infinite alternate ease-in-out;
   }
   @keyframes jumpy-box {
     to {
-      transform: translate(0, -10px);
+      transform: translate(0, -15px);
     }
   }
   .accordion--answer {
     width: 100%;
+  }
+  .attribution{
+    margin-top: 150px;
   }
 }
