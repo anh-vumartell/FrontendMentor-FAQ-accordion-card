@@ -1,21 +1,14 @@
-const accordionQuestion = document.getElementsByClassName(
-  "accordion--question"
-);
+const accordionQuestions = document.querySelectorAll(".accordion--question");
 
-
-let i;
-
-for (i = 0; i < accordionQuestion.length; i++) {
-  accordionQuestion[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    const accordionAnswer = this.nextElementSibling;
-    if(accordionAnswer.style.display === 'block'){
-      accordionAnswer.style.display = "none";
-      
-    } else{
-      accordionAnswer.style.display = "block";
-      
-    }
+const items = document.querySelectorAll(".accordion__item");
+accordionQuestions.forEach((question) => {
+  question.addEventListener("click", (e) => {
+    const currentItem = e.currentTarget.closest(".accordion__item");
+    items.forEach((item) => {
+      if (item !== currentItem) {
+        item.classList.remove("reveal-answer");
+      }
+    });
+    currentItem.classList.toggle("reveal-answer");
   });
-}
-
+});
