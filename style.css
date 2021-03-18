@@ -59,7 +59,7 @@ main {
   height: 250px;
   margin-top: -107px;
   margin-right: 26px;
-  z-index: 10;
+  z-index: 1;
   background-image: url(./images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-size: auto;
@@ -120,15 +120,13 @@ main {
   display: block;
   overflow: hidden;
   width: 260px;
-  text-align: justify;
+  /* text-align: justify; */
   margin-bottom: 15px;
   font-size: 1.2rem;
-  color: var(--gradient-2);
   line-height: 1.2rem;
   font-size: var(--text-xs);
   color: var(--neutral-1);
   animation: show-answer 0.75s ease-in;
-  opacity: 0.6;
 }
 
 @keyframes show-answer {
@@ -199,11 +197,9 @@ main {
     align-items: flex-start;
   }
   main {
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 350px 1fr;
   }
-  .accordion {
-    margin-left: 10px;
-  }
+  
   .header__container h1 {
     font-size: 2.5rem;
   }
@@ -220,30 +216,30 @@ main {
     background-image: url(./images/bg-pattern-desktop.svg);
     background-size: 700px;
     background-repeat: no-repeat;
-    background-position: -300px -145px;
+    background-position: -390px -175px;
   }
   .image--desktop img {
     position: relative;
-    height: 340px;
-    top: 10%;
+    height: 290px;
+    top: 12%;
     left: -40px;
   }
   .image--box {
     display: block;
     position: relative;
-    top: -65%;
-    left: -96px;
+    top: -67%;
+    left: -87px;
   }
   .image--box img {
-    width: 200px;
+    width: 180px;
     animation: jumpy-box 1.5s infinite alternate ease-in-out;
   }
   @keyframes jumpy-box {
     to {
-      transform: translate(0, -15px);
+      transform: translate(0, -20px);
     }
   }
-  .accordion--answer {
+  .reveal-answer .accordion--answer {
     width: 100%;
   }
   .attribution {
